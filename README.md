@@ -32,6 +32,20 @@ A secure, dark-themed Flask image gallery that lets authenticated users upload, 
   FLASK_DEBUG=false
   ```
 
+## Usage
+  ```bash
+  docker volume create gallery-data
+
+  docker run -d \
+    --restart always \
+    --name docker-guardians-of-the-gallery \
+    -p 3001:3001 \
+    -v gallery-data:/app/data \
+    --env-file .env \
+    ghcr.io/techroy23/docker-guardians-of-the-gallery:latest
+  ```
+
+
 ## Environment Variables
   | Variable         | Description                                            | Default                                    |
   |------------------|--------------------------------------------------------|--------------------------------------------|
