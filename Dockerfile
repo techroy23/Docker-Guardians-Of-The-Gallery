@@ -52,4 +52,6 @@ HEALTHCHECK --interval=30s --timeout=3s \
   CMD wget --no-verbose --tries=1 --spider http://localhost:3001/login || exit 1
 
 # Launch Gunicorn
-CMD ["gunicorn", "app:app", "-b", "0.0.0.0:3001", "-w", "4", "--log-level", "info"]
+# CMD ["gunicorn", "app:app", "-b", "0.0.0.0:3001", "-w", "4", "--log-level", "info"]
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:3001", "-w", "4", "--reload", "--log-level", "debug"]
+
