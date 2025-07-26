@@ -41,7 +41,8 @@ A secure, dark-themed Flask image gallery that lets authenticated users upload, 
     --name docker-guardians-of-the-gallery \
     -p 3001:3001 \
     -v gallery-data:/app/data \
-    --env-file .env \
+    -e key=value \ # Follow the guide below
+    -e key=value \ # Follow the guide below
     ghcr.io/techroy23/docker-guardians-of-the-gallery:latest
   ```
 
