@@ -1,0 +1,6 @@
+Flask
+itsdangerous
+Werkzeug
+Pillow
+python-dotenv
+gunicorn
